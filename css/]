@@ -1,0 +1,96 @@
+.header-title {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-family: raleway;
+  color: #2E2F42;
+}
+
+.header-web {
+  color: #4D5AE5;
+}
+
+.header-navigation a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #2E2F42;
+  position: relative;
+}
+
+.header-navigation a:hover,
+.header-navigation a:focus {
+  color: #404bbf;
+}
+
+.header-navigation a:active::after {
+  content: "";
+  display: block;
+  background-color: #404BBF;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.header-contacts a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+
+.header-contacts a:hover,
+.header-contacts a:focus {
+  color: #404bbf;
+}
+
+
+/* flexbox stiles */
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
+.header-block {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding-left: 76px;
+}
+
+.header-nav-block {
+  display: flex;
+}
+
+.header-contact-block {
+  display: flex;
+}
+
+
+.header-navigation {
+  display: flex;
+  gap: 40px;
+}
+
+.header-contacts {
+  display: flex;
+  gap: 40px;
+  flex-shrink: 0;
+}
+
+.header-section {
+  border-bottom: 1px solid #E7E9FC;
+}
+
+.header-block a {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  display: inline-block;
+}

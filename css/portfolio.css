@@ -1,0 +1,85 @@
+.portfolio-section h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2E2F42;
+}
+
+.portfolio-section ul h3 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2E2F42;
+}
+
+.portfolio-section p {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  color: #434455;
+  margin-top: 8px;
+}
+
+.portfolio-section {
+  padding: 120px 0px;
+}
+
+/* flexbox content */
+.portfolio-content {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 48px;
+  column-gap: 24px;
+  padding: 0;
+  margin: 72px 0 0 0;
+}
+
+.portfolio-content li {
+  width: calc((100% - 48px) / 3);
+}
+
+.portfolio-content li img {
+  max-width: 100%;
+}
+
+.portfolio-image {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #4D5AE5;
+  padding: 40px 32px;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.portfolio-item {
+  transition: box-shadow 250ms ease-in-out;
+}
+
+.portfolio-item:hover .overlay {
+  transform: translateY(0);
+}
+
+
+
+.portfolio-item:hover,
+.portfolio-item:focus {
+  box-shadow: 0px 2px 1px 0px #2E2F4214, 0px 1px 1px 0px #2E2F4229, 0px 1px 6px 0px #2E2F4214;
+}
+
+.overlay p {
+  margin-top: auto;
+  color: #F4F4FD;
+}

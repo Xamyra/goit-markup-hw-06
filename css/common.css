@@ -1,0 +1,71 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #434455;
+  background-color: #FFFF;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* Скидання відступів */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+img {
+  display: block;
+}
+
+.wrapper {
+  padding: 32px 16px;
+  border-width: 0 1px 1px 1px;
+  border-color: #E7E9FC;
+  border-style: solid;
+  background-color: #FFFFFF;
+  border-radius: 0 0 4px 4px
+}
+
+.wrapper p {
+  margin-top: 8px;
+}
+
+.sr-only {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  margin: -1px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
