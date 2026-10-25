@@ -1,21 +1,23 @@
-.portfolio-section h2 {
+/* Базові стилі контейнера */
+.portfolio-section-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
-  color: #2E2F42;
+  color: #2e2f42;
 }
 
-.portfolio-section ul h3 {
+/* Стилізація тексту картки (послуга та клас послуги) */
+.portfolio-decs-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: #2E2F42;
+  color: #2e2f42;
 }
 
-.portfolio-section p {
+.portfolio-description {
   font-weight: 400;
   font-size: 16px;
   letter-spacing: 0.02em;
@@ -24,46 +26,7 @@
   margin-top: 8px;
 }
 
-.portfolio-section {
-  padding: 120px 0px;
-}
-
-/* flexbox content */
-.portfolio-content {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 48px;
-  column-gap: 24px;
-  padding: 0;
-  margin: 72px 0 0 0;
-}
-
-.portfolio-content li {
-  width: calc((100% - 48px) / 3);
-}
-
-.portfolio-content li img {
-  max-width: 100%;
-}
-
-.portfolio-image {
-  position: relative;
-  display: block;
-  overflow: hidden;
-}
-
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #4D5AE5;
-  padding: 40px 32px;
-  top: 0;
-  left: 0;
-  transform: translateY(100%);
-  transition: transform 250ms ease-in-out;
-}
-
+/* Стилізація карток контейнера */
 .portfolio-item {
   transition: box-shadow 250ms ease-in-out;
 }
@@ -72,14 +35,76 @@
   transform: translateY(0);
 }
 
-
-
 .portfolio-item:hover,
 .portfolio-item:focus {
-  box-shadow: 0px 2px 1px 0px #2E2F4214, 0px 1px 1px 0px #2E2F4229, 0px 1px 6px 0px #2E2F4214;
+  box-shadow:
+    0px 2px 1px 0px #2e2f4214,
+    0px 1px 1px 0px #2e2f4229,
+    0px 1px 6px 0px #2e2f4214;
+}
+
+/* Стилізація зображень (спершу контейнер (div) зображення, потім саме зображення */
+.portfolio-image {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.portfolio-image img {
+  max-width: 100%;
+}
+
+/* Розміщення карток опису (ul) */
+.portfolio-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  gap: 48px;
+  margin: 72px 0 0 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-content {
+    flex-direction: row;
+    row-gap: 72px;
+    column-gap: 24px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .portfolio-content {
+    row-gap: 48px;
+  }
+}
+
+/* Розрахунок ширини карток */
+@media screen and (min-width: 768px) {
+  .portfolio-item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .portfolio-content li {
+    width: calc((100% - 48px) / 3);
+  }
+}
+
+/* Стилізація спливаючого вікна при наведенні на картку */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  padding: 40px 32px;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  transition: transform 250ms ease-in-out;
 }
 
 .overlay p {
-  margin-top: auto;
-  color: #F4F4FD;
+  color: #f4f4fd;
 }

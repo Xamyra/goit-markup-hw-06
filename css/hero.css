@@ -1,39 +1,80 @@
 .hero-section {
-  background-color: #2E2F42;
+  background-color: #2e2f42;
   background-image:
     linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url("../images/background/hero-bg.jpg");
-  padding: 188px 0px;
+    image-set(
+      url("../images/background/hero-bg-mobile.jpg") 1x,
+      url("../images/background/hero-bg-mobile@2x.jpg") 2x
+    );
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
   max-width: 1440px;
+
   margin-left: auto;
   margin-right: auto;
+  padding: 72px 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-section {
+    background-image:
+      linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      image-set(
+        url("../images/background/hero-bg-tablet.jpg") 1x,
+        url("../images/background/hero-bg-tablet@2x.jpg") 2x
+      );
+    padding: 112px 0px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .hero-section {
+    background-image:
+      linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      image-set(
+        url("../images/background/hero-bg-desktop.jpg") 1x,
+        url("../images/background/hero-bg-desktop@2x.jpg") 2x
+      );
+    padding: 188px 0px;
+  }
 }
 
 .hero-title {
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   max-width: 496px;
   margin: 0 auto;
 }
 
+@media screen and (min-width: 768px) {
+  .hero-title {
+    font-size: 56px;
+    line-height: 1.07;
+  }
+}
+
 .hero-button {
-  background-color: #4D5AE5;
+  background-color: #4d5ae5;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  color: #FFFFFF;
+  color: #ffffff;
+
   margin-top: 48px;
   padding: 16px 32px;
+
   border-radius: 4px;
   border: none;
+
   box-shadow: 0px 4px 4px 0px #00000026;
   transition: background-color 250ms ease-in-out;
 }
@@ -47,6 +88,3 @@
 .hero-content {
   text-align: center;
 }
-
-
-/* flexbox styles */

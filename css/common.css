@@ -1,20 +1,8 @@
-body {
-  font-family: 'Roboto', sans-serif;
-  color: #434455;
-  background-color: #FFFF;
-}
-
+/* Скидання базових стилів */
 a {
   text-decoration: none;
 }
 
-.container {
-  max-width: 1158px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
-/* Скидання відступів */
 h1,
 h2,
 h3,
@@ -38,19 +26,43 @@ img {
   display: block;
 }
 
-.wrapper {
-  padding: 32px 16px;
-  border-width: 0 1px 1px 1px;
-  border-color: #E7E9FC;
-  border-style: solid;
-  background-color: #FFFFFF;
-  border-radius: 0 0 4px 4px
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.wrapper p {
-  margin-top: 8px;
+/* базова стилізація сайту */
+body {
+  font-family: "Roboto", sans-serif;
+  color: #434455;
+  background-color: #ffff;
 }
 
+/* базові налаштування розміру секцій контенту (від header до footer) */
+.container {
+  max-width: 1158px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+section {
+  padding: 96px 0px;
+}
+
+@media screen and (min-width: 1158px) {
+  section {
+    padding: 120px 0px;
+  }
+}
+
+/* клас для правильного приховування контенту */
 .sr-only {
   position: absolute;
   white-space: nowrap;
@@ -64,8 +76,20 @@ img {
   margin: -1px;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+.hide {
+  display: none;
+}
+
+/* налаштування стилів тексту опису карток (секції: team, portfolio)  */
+.wrapper {
+  padding: 32px 16px;
+  border-width: 0 1px 1px 1px;
+  border-color: #e7e9fc;
+  border-style: solid;
+  background-color: #ffffff;
+  border-radius: 0 0 4px 4px;
+}
+
+.wrapper p {
+  margin-top: 8px;
 }

@@ -1,27 +1,28 @@
+/* Базові стилі контейнера */
 .team-section {
-  background-color: #F4F4FD;
-  padding: 120px 0px;
+  background-color: #f4f4fd;
 }
 
-.team-section h2 {
+.team-section-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   letter-spacing: 0.02em;
-  color: #2E2F42;
+  color: #2e2f42;
   text-align: center;
 }
 
-.team-section ul h3 {
+/* Стилізація тексту картки (ім'я та посада) */
+.team-desc-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: #2E2F42;
+  color: #2e2f42;
   text-align: center;
 }
 
-.team-section ul p {
+.team-description {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -30,31 +31,58 @@
   text-align: center;
 }
 
+.team-content-item {
+  box-shadow:
+    0px 2px 1px 0px #2e2f4214,
+    0px 1px 1px 0px #2e2f4229,
+    0px 1px 6px 0px #2e2f4214;
+}
 
-/* flexbox styles */
+/* Розміщення та стилізація карток членів команди */
 .team-content {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
   justify-content: center;
-  padding: 0;
+
+  gap: 72px;
   margin: 72px 0 0 0;
 }
 
-.team-content-item {
-  box-shadow: 0px 2px 1px 0px #2E2F4214, 0px 1px 1px 0px #2E2F4229, 0px 1px 6px 0px #2E2F4214;
+@media screen and (min-width: 768px) {
+  .team-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 64px;
+  }
 }
 
+@media screen and (min-width: 1158px) {
+  .team-content {
+    flex-wrap: nowrap;
+  }
+}
+
+/* Розрахунок ширини карток */
+@media screen and (min-width: 767.97px) and (max-width: 768px) {
+  .team-content-item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+/* Стилізація зображень соціальних мереж */
 .team-social-icons {
   display: flex;
   gap: 24px;
   margin-top: 8px;
+  justify-content: center;
 }
 
 .team-social-icons .icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #4D5AE5;
+  background-color: #4d5ae5;
   width: 40px;
   height: 40px;
   border-radius: 40px;
@@ -63,9 +91,9 @@
 
 .team-social-icons .icon:hover,
 .team-social-icons .icon:focus {
-  background-color: #404BBF;
+  background-color: #404bbf;
 }
 
-.team-social-icons .icon svg {
-  fill: #F4F4FD;
+.team-svg-icon {
+  fill: #f4f4fd;
 }

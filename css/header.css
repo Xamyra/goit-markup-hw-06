@@ -1,3 +1,9 @@
+@media screen and (min-width: 768px) {
+  .header-section {
+    border-bottom: 1px solid #e7e9fc;
+  }
+}
+
 .header-title {
   text-decoration: none;
   font-weight: 700;
@@ -6,32 +12,52 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   font-family: raleway;
-  color: #2E2F42;
+  color: #2e2f42;
 }
 
 .header-web {
-  color: #4D5AE5;
+  color: #4d5ae5;
 }
 
+/* Стилізація кнопки меню для телефонів */
+.burger-mobile-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: auto;
+
+  background-color: transparent;
+  border: none;
+}
+
+@media screen and (min-width: 768px) {
+  .burger-mobile-menu {
+    display: none;
+  }
+}
+
+/* Стилізація навігації по сайту */
 .header-navigation li {
   position: relative;
+  padding: 24px 0;
 }
 
-.header-navigation a {
+.header-nav-item-text {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #2E2F42;
+  color: #2e2f42;
   transition: color 250ms ease-in-out;
 }
 
-.header-navigation a.current {
-  color: #404BBF;
+.header-nav-item-text.current {
+  color: #404bbf;
 }
 
-.header-navigation a:hover,
-.header-navigation a:focus {
+.header-nav-item-text:hover,
+.header-nav-item-text:focus {
   color: #404bbf;
 }
 
@@ -46,7 +72,8 @@
   border-radius: 2px;
 }
 
-.header-contacts a {
+/* Стилізація блоку контактів */
+.header-contacts-item-text {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -55,37 +82,51 @@
   transition: color 250ms ease-in-out;
 }
 
-.header-contacts a:hover,
-.header-contacts a:focus {
+.header-contacts-item-text:hover,
+.header-contacts-item-text:focus {
   color: #404bbf;
 }
 
-
-/* flexbox stiles */
-.header-content {
+/* flexbox стилі */
+.header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
 
-.header-content a {
-  padding-top: 24px;
-  padding-bottom: 24px;
-  display: inline-block;
+@media screen and (max-width: 320px) {
+  .header-container {
+    padding: 16px;
+  }
 }
 
 .header-navigation {
-  display: flex;
-  gap: 40px;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .header-navigation {
+    display: flex;
+    gap: 40px;
+  }
 }
 
 .header-contacts {
-  display: flex;
-  gap: 40px;
-  flex-shrink: 0;
+  display: none;
 }
 
-.header-section {
-  border-bottom: 1px solid #E7E9FC;
+@media screen and (min-width: 768px) {
+  .header-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .header-contacts {
+    flex-direction: row;
+    gap: 40px;
+    flex-shrink: 0;
+  }
 }
