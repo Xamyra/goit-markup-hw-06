@@ -36,6 +36,7 @@
     0px 2px 1px 0px #2e2f4214,
     0px 1px 1px 0px #2e2f4229,
     0px 1px 6px 0px #2e2f4214;
+  width: 264px;
 }
 
 /* Розміщення та стилізація карток членів команди */
@@ -43,6 +44,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 
   gap: 72px;
   margin: 72px 0 0 0;
@@ -64,10 +66,8 @@
 }
 
 /* Розрахунок ширини карток */
-@media screen and (min-width: 767.97px) and (max-width: 768px) {
-  .team-content-item {
-    width: calc((100% - 24px) / 2);
-  }
+.team-content-item {
+  width: 264px;
 }
 
 /* Стилізація зображень соціальних мереж */

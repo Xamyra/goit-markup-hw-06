@@ -5,7 +5,6 @@
 }
 
 .header-title {
-  text-decoration: none;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.33;
@@ -13,6 +12,8 @@
   text-transform: uppercase;
   font-family: raleway;
   color: #2e2f42;
+
+  margin-right: 76px;
 }
 
 .header-web {
@@ -127,6 +128,9 @@
   .header-contacts {
     flex-direction: row;
     gap: 40px;
-    flex-shrink: 0;
+  }
+
+  .header-container address {
+    margin-left: auto;
   }
 }
