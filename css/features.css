@@ -7,7 +7,7 @@
   color: #2e2f42;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 767.97px) {
   .features-desc-title {
     text-align: center;
   }
@@ -59,9 +59,15 @@
 }
 
 /* Розрахунок ширини карток */
-@media screen and (min-width: 767.97px) and (max-width: 768px) {
+@media screen and (min-width: 767.97px) and (max-width: 1157.97px) {
   .features-blocks {
     width: calc((100% - 24px) / 2);
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .features-blocks {
+    width: calc((100% - 72px) / 4);
   }
 }
 

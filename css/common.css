@@ -43,9 +43,21 @@ body {
 
 /* базові налаштування розміру секцій контенту (від header до footer) */
 .container {
-  max-width: 1158px;
+  max-width: 320px;
   padding: 0 16px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+  }
 }
 
 @media screen and (min-width: 1158px) {
