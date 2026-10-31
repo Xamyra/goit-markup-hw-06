@@ -21,18 +21,23 @@
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-
-  padding: 72px 16px 40px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .mobile-menu-backdrop.is-open {
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
+}
+
+.mobile-menu-content {
+  width: 100%;
+  height: 100%;
+
+  padding: 72px 16px 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* Стилізація блоку навігації по сайту */

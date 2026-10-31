@@ -4,6 +4,11 @@
   }
 }
 
+header a {
+  display: inline-block;
+}
+
+/* Стиліазація заголовка сайту  */
 .header-title {
   font-weight: 700;
   font-size: 18px;
@@ -18,7 +23,6 @@
 
 @media screen and (min-width: 768px) {
   .header-title {
-    display: inline-block;
     padding: 0;
     margin-right: 120px;
   }
@@ -94,6 +98,7 @@
 
 /* Стилізація блоку контактів */
 .header-contacts-item-text {
+  font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16667;
