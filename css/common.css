@@ -107,3 +107,40 @@ section {
 .wrapper p {
   margin-top: 8px;
 }
+
+/* Налаштування стилі кнопки закриття для модальних вікон */
+.cancel-button-backdrop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  right: 24px;
+  top: 24px;
+
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+
+  background-color: #e7e9fc;
+  border: 1px solid #2e2f4266;
+
+  color: #2e2f42;
+
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cancel-button-backdrop:hover,
+.cancel-button-backdrop:focus {
+  background-color: #404bbf;
+  border-color: #404bbf;
+  color: #ffffff;
+}
+
+.cancel-button-icon {
+  display: block;
+  fill: currentColor;
+}
